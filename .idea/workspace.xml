@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2a3faf04-1c6b-4dc6-8183-b20a8cf117f1" name="Default Changelist" comment="4-2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ch5/DiscountCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ch5/DiscountCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ch5/DiscountConditionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ch5/DiscountConditionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ch5/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ch5/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ch5/MovieType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ch5/MovieType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ch5/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ch5/Screening.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -76,7 +81,14 @@
       <workItem from="1572153527338" duration="6290000" />
       <workItem from="1572699758330" duration="5428000" />
       <workItem from="1575375717802" duration="3392000" />
-      <workItem from="1575551505545" duration="5782000" />
+      <workItem from="1575551505545" duration="6232000" />
+      <workItem from="1576096103644" duration="3315000" />
+      <workItem from="1576986823295" duration="1577000" />
+      <workItem from="1576990418736" duration="7000" />
+      <workItem from="1576990455639" duration="203000" />
+      <workItem from="1576991586407" duration="1539000" />
+      <workItem from="1576994546071" duration="2751000" />
+      <workItem from="1577052872163" duration="737000" />
     </task>
     <servers />
   </component>

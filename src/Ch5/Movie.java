@@ -3,54 +3,45 @@ package Ch5;
 import Ch2.Money;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.locks.Condition;
 
-public class Movie {
+
+public abstract class Movie {
     private String title;
     private Duration runningTime;
     private Money fee;
     private List<DiscountCondition> discountConditions;
 
-    private MovieType movieType;
-    private Money discountAmount;
-    private double discountPercent;
+    // 할인 정책을 구현에 포함한 인스턴스 변수 삭제
+   // private MovieType movieType;
+   // private Money discountAmount;
+   // private double discountPercent;
+
+    public Movie(String title, Duration runningTime, Money fee, DiscountCondition ...discountConditions) {
+        this.title = title;
+        this.runningTime = runningTime;
+        this.fee = fee;
+        this.discountConditions = Arrays.asList(discountConditions);
+    }
 
     public Money calculateMovieFee(Screening screening) {
         if (isDiscountable(screening)) {
             return fee.minus(calculateDiscountAmount());
         }
 
+        return Money.ZERO;
+    }
+
+    protected Money getFee() {
         return fee;
     }
+
 
     private boolean isDiscountable(Screening screening) {
         return discountConditions.stream().anyMatch(condition -> condition.isSatisfiedBy(screening));
     }
 
-    // 할인 요금 계산
-    private Money calculateDiscountAmount() {
-        switch (movieType) {
-            case AMOUNT_DISCOUNT:
-                return calculateAmountDiscountAmount();
-            case PERCENT_DISCOUNT:
-                return calculatePercentDiscountAmount();
-            case NONE_DISCOUNT:
-                return calculateNoneDiscountAmount();
-        }
-
-        throw new IllegalStateException();
-    }
-
-    private Money calculateAmountDiscountAmount() {
-        return discountAmount;
-    }
-
-    private Money calculatePercentDiscountAmount() {
-        return fee.times(discountPercent);
-    }
-
-    private Money calculateNoneDiscountAmount() {
-        return Money.ZERO;
-    }
+    abstract  protected Money calculateDiscountAmount();
 }
